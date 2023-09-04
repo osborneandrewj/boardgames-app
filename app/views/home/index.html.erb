@@ -1,0 +1,42 @@
+
+<body>
+    <main>
+    <div class="container py-4">
+        <div class="p-5 mb-4 bg-dark text-white border rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Boardgame Collection App</h1>
+            <p class="col-md-8 fs-4">A simple and user-friendly application designed to help board game enthusiasts organize 
+            and document their collection of board games.</p>
+            <%= link_to "See Games", games_path, class: "btn btn-primary btn-lg"%>
+        </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h2>User-Friendly Interface</h2>
+            <p>The application features an intuitive and user-friendly interface that allows you to 
+            navigate your collection effortlessly. It provides clear options for adding, editing, searching, and deleting entries.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="h-100 p-5 bg-dark text-white border rounded-3">
+            <h2>Add Games</h2>
+            <p>For each game, you can input the following details:
+                <ul>
+                <li>Title: The name of the board game.</li>
+                <li>Game Description: A brief description or overview of the game.</li>
+                <li>Number of Players: The minimum and maximum number of players required to play the game.</li>
+                <li>Year of Release: The year when the game was originally released.</li>
+                </ul>
+            </p>
+            </div>
+        </div>
+        </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      © 2023
+    </footer>
+  </div>
+    </main>
+</body>
