@@ -51,7 +51,7 @@ Follow these steps to get the Board Games Catalog App up and running on your loc
 
 ## Contributing
 
-Contributions to the Board Games Catalog App are welcome! If you have any ideas for improvements or would like to report a bug, please [create an issue](https://github.com/osborneandrewj/boardgames-app/issues).
+Although this project was created purely as an exploration of the Ruby on Rails framework, contributions to the Board Games Catalog App are welcome! If you have any ideas for improvements or would like to report a bug, please [create an issue](https://github.com/osborneandrewj/boardgames-app/issues).
 
 ## License
 
