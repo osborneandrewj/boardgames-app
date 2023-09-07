@@ -11,27 +11,34 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
-    <%= form.label :players, style: "display: block" %>
-    <%= form.text_field :players %>
-  </div>
-
-  <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.text_field :year %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  <body>
+    <main>
+      <div class="container py-4">
+        <div class="p-2 mb-4 bg-light border rounded-3">
+          <div class="container-fluid py-5">
+            <div class="form-label">
+              <%= form.text_field :title, class:"form-control", placeholder:"Game Title" %>
+            </div>
+      
+            <div class="form-label">
+              <%= form.text_field :description, class:"form-control", placeholder:"Game Description" %>
+            </div>
+      
+            <div class="field form-label">
+              <%= form.text_field :players, class:"form-control", placeholder:"Number of Players" %>
+            </div>
+      
+            <div class="form-label">
+              <%= form.text_field :year, class:"form-control", placeholder:"Year of Release" %>
+            </div>
+            </br>
+            <div>
+              <%= form.submit class:'btn btn-secondary' %>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+  </body>
 <% end %>
