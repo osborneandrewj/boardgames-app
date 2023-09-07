@@ -1,10 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @game %>
+<body>
+    <main>
+    <div class="container py-4">
+        <div class="p-5 mb-4 bg-light border rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold"><%= @game.title %></h1>
+            <p class="col-md-8 fs-4"><%= @game.description %></p>
+            </br>
+            <p class="col-md-8 fs-6">Players: <%= @game.players %></p>
+            <p class="col-md-8 fs-6">Year Released: <%= @game.year %></p>
+            </br>
+            <div>
+              <%= link_to "Edit", edit_game_path(@game), class: "btn btn-secondary"%>
+              <%= link_to "Back", games_path, class: "btn btn-secondary"%>
+            </div>
+        </div>
+        
+        </div>
+  </div>
+    </main>
+</body>
 
-<div>
-  <%= link_to "Edit", edit_game_path(@game), class: "btn btn-outline-secondary"%>
-  <%= link_to "Back", games_path, class: "btn btn-outline-secondary"%>
-
-  <%= button_to "Destroy this game", @game, method: :delete %>
-</div>

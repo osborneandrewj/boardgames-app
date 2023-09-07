@@ -19,13 +19,10 @@
         <td><%= game.description %></td>
         <td><%= game.players %></td>
         <td><%= game.year %></td>
-        <td>
-          <%= link_to 'View', game, class: "btn btn-outline-secondary btn-sm" %>
-          <%= button_to 'Delete', game, method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class: "btn btn-outline-danger btn-sm" %>
-        </td>
+        <td><%= link_to 'View', game, class: "btn btn-outline-secondary btn-sm" %><%= button_to 'Delete', game, method: :delete, class: "btn btn-outline-danger btn-sm", form: { data: { turbo_confirm: "Are you sure?" } } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "New game", new_game_path, class: "btn btn-outline-success" %>
+<%= link_to "New game", new_game_path, class: "btn btn-secondary" %>
