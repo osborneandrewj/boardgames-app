@@ -9,20 +9,30 @@
       <th scope="col">Title</th>
       <th scope="col">Description</th>
       <th scope="col">Players</th>
+      <th>User Id</th>
       <th scope="col">Release Year</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <% @games.each do |game|  %>
-      <tr>
-        <th scope="row"><%= game.title %></th>
-        <td><%= game.description %></td>
-        <td><%= game.players %></td>
-        <td><%= game.year %></td>
-        <td><%= link_to 'View', game, class: "btn btn-outline-secondary btn-sm" %><%= button_to 'Delete', game, method: :delete, class: "btn btn-outline-danger btn-sm", form: { data: { turbo_confirm: "Are you sure?" } } %></td>
-      </tr>
+    <% @games.each do |game| %>
+      <% if game.user == current_user %>
+        <tr>
+          <th scope="row"><%= game.title %></th>
+          <td><%= game.description %></td>
+          <td><%= game.players %></td>
+          <td><%= game.user_id %></td>
+          <td><%= game.year %></td>
+          <td><%= link_to 'View', game, class: "btn btn-outline-secondary btn-sm" %></td>
+          <td>
+            <% if user_signed_in? %>
+              <%= button_to 'Delete', game, method: :delete, class: "btn btn-outline-danger btn-sm", form: { data: { turbo_confirm: "Are you sure?" } } %></td>
+            <% end %>
+          </tr>
+      <% end %>  
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "New game", new_game_path, class: "btn btn-secondary" %>
+<% if user_signed_in? %>
+  <%= link_to "New game", new_game_path, class: "btn btn-secondary" %>
+<% end %>
