@@ -12,7 +12,9 @@
             <p class="col-md-8 fs-6">Year Released: <%= @game.year %></p>
             </br>
             <div>
-              <%= link_to "Edit", edit_game_path(@game), class: "btn btn-secondary"%>
+              <% if user_signed_in? %>
+                <%= link_to "Edit", edit_game_path(@game), class: "btn btn-secondary"%>
+              <% end %>
               <%= link_to "Back", games_path, class: "btn btn-secondary"%>
             </div>
         </div>

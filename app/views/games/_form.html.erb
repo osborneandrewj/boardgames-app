@@ -31,6 +31,9 @@
             <div class="form-label">
               <%= form.text_field :year, class:"form-control", placeholder:"Year of Release" %>
             </div>
+            <div class="form-label">
+              <%= form.number_field :user_id, id: :game_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+            </div>
             </br>
             <div>
               <%= form.submit class:'btn btn-secondary' %>
