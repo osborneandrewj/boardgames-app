@@ -2,6 +2,8 @@
 
 The **Board Games Catalog App** is a web-based application that allows users to catalog and manage their collection of board games. This application provides an easy way to organize board game titles, descriptions, player counts, and release years. Whether you're a board game enthusiast, collector, or just looking for a way to keep track of your games, this app has you covered.
 
+Hosted Here: https://boardgamerails-0b4172a64dcd.herokuapp.com
+
 ## Features
 
 - **Add Board Games**: Users can add new board games to their catalog, providing details such as the title, game description, number of players, and the year of release.
